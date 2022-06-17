@@ -1,0 +1,4 @@
+# Don't merge and collapse in git diff
+yarn.lock                 -diff
+.pnp.*                    -diff
+.yarn/releases/*.cjs -diff
