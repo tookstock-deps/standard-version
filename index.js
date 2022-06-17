@@ -61,7 +61,9 @@ module.exports = async function standardVersion (argv) {
   }
   try {
     let version
-    if (pkg) {
+    if (args.useVersion) {
+      version = args.useVersion
+    } else if (pkg) {
       version = pkg.version
     } else if (args.gitTagFallback) {
       version = await latestSemverTag(args.tagPrefix)

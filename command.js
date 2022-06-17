@@ -12,6 +12,12 @@ const yargs = require('yargs')
     default: defaults.bumpFiles,
     array: true
   })
+  .option('use-version', {
+    alias: 'u',
+    describe: 'Specify the version explicitly',
+    requiresArg: true,
+    string: true
+  })
   .option('release-as', {
     alias: 'r',
     describe: 'Specify the release type manually (like npm version <major|minor|patch>)',
