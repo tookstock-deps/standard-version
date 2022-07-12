@@ -641,7 +641,7 @@ describe('standard-version', function () {
     })
   })
 
-  it('does not update files present in .gitignore', async () => {
+  it('DOES update files present in .gitignore', async () => {
     mock({
       bump: 'minor',
       fs: {
@@ -659,10 +659,10 @@ describe('standard-version', function () {
     })
     await exec()
     JSON.parse(fs.readFileSync('package-lock.json', 'utf-8')).version.should.equal(
-      '1.0.0'
+      '1.1.0'
     )
     JSON.parse(fs.readFileSync('bower.json', 'utf-8')).version.should.equal(
-      '1.0.0'
+      '1.1.0'
     )
     getPackageVersion().should.equal('1.1.0')
   })

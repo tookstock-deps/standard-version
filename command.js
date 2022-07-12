@@ -45,6 +45,11 @@ const yargs = require('yargs')
     type: 'boolean',
     default: defaults.firstRelease
   })
+  .option('release-count', {
+    describe: 'Releases to scan for changelog; 0 to recreate',
+    default: defaults.releaseCount,
+    type: 'number',
+  })
   .option('sign', {
     alias: 's',
     describe: 'Should the git commit and tag be signed?',

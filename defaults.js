@@ -3,6 +3,7 @@ const spec = require('conventional-changelog-config-spec')
 const defaults = {
   infile: 'CHANGELOG.md',
   firstRelease: false,
+  releaseCount: 1,
   sign: false,
   noVerify: false,
   commitAll: false,
