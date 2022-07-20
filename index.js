@@ -62,7 +62,7 @@ module.exports = async function standardVersion (argv) {
   try {
     let version
     if (args.useVersion) {
-      version = args.useVersion
+      version = args.useVersion.replace(/^v/, '')
     } else if (pkg) {
       version = pkg.version
     } else if (args.gitTagFallback) {
